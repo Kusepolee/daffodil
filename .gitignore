@@ -6,10 +6,27 @@ bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
-bootstrap/cache/
 .env.*.php
 .env.php
 .env
+
+#common
+._.DS_Sortore
+Thumbs.db
+
+#bower folder
+public/bower_components/
+
+#config files
+config/restrose.*
+
+#ico
+public/favicon.*
+
+#custom
+public/custom/
+
+socket.js
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
