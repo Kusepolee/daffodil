@@ -11,22 +11,36 @@
 |
 */
 
+Route::get('/way/wechat_callback_enterprise', 'WayController@wechatCallbackEnterprise');
+
 Route::get('/', function () {
-    return 'hi';
+     $w = new RestRose\Wechat\Enterprise\Api;
+     //$a = $w->getAuthInfo();
+     //print_r($a);
+    //echo Request::url();
+     $b = $w->getAuthCode();
+     //echo $b;
+    // echo Request::path();
+ 
 });
 
 Route::get('/test', function () {
      //echo "LEEhhh";
-    return view('welcome');
+    //return view('welcome');
+    //$a = Cache::get('arr');
+    //print_r($a);
+    echo Cache::get('aes_msg');
+    //echo Cache::get('str1');
+    Cache::flush();
 });
 
 Route::get('/test1', function () {
-    $h = new RestRose\Water\Helper;
-    //$array = $h->IP2City('127.0.0.1');
-    //$array = $h->IP2City('202.102.110.204');
-    //$array = $h->getService();
-    $array = $h->clearCache();
-    //print_r($array);
+     $w = new RestRose\Wechat\Enterprise\Api;
+    // //echo $w->getToken();
+     $a = $w->openCallbackMode();
+    // print_r($a);
+    //Cache::flush();
+
 });
 
 Route::get('/test2', function () {
