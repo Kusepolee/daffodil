@@ -1,5 +1,6 @@
 vendor/
 node_modules/
+bower_components/
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -14,12 +15,6 @@ app/storage/
 ._.DS_Sortore
 Thumbs.db
 
-#bower folder
-public/bower_components/
-
-#config files
-config/restrose.*
-
 #ico
 public/favicon.*
 
@@ -30,6 +25,3 @@ public/custom/
 public/MP*
 
 socket.js
-
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
