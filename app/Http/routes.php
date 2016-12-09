@@ -27,7 +27,14 @@ Route::get('/', function () {
 |
 */
 Route::get('/test', function () {
-    Cache::
+    $arr = Cache::get('callback');
+    print_r($arr);
+    $str = Cache::get('callback_str');
+    echo $str;
+    Cache::flush();
+    $w = new RestRose\Wechat\Enterprise\Api;
+    $w->sendText('1','good');
+    //echo $w->getToken();
 });
 
 
