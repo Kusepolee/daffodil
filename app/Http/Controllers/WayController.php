@@ -23,7 +23,8 @@ class WayController extends Controller
     public function wechatCallbackEnterprise()
     {
         $w = new Api;
-        return $w->openCallbackMode();
+        //return $w->openCallbackMode();
+        $w->sendText('1',$w->openCallbackMode());
     }
 
     /**
