@@ -22,7 +22,7 @@ class WayController extends Controller
     public function wechatCallbackEnterprise()
     {
         $w = new Api;
-        return $w->openCallbackMode();
+        echo $w->openCallbackMode();
     }
 
     /**
@@ -32,7 +32,7 @@ class WayController extends Controller
     public function wechatCallbackPublic()
     {
         $w = new Papi;
-        if($w->ca()) return $w->ca();
+        if($w->ca()) echo $w->ca();
     }
 
     /**
