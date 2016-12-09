@@ -50,8 +50,9 @@ return [
     |
     */
     'key' =>env('SERVICE_KEY',null),
-    'service' =>env('SERVICE_URL','service.restrose.net'),
+    'service' =>env('SERVICE_URL','restrose.org'),
     'service_ssl' =>env('SERVICE_SSL',true),
+    'service_path' =>env('SERVICE_PATH',false),
 
     /*
     |--------------------------------------------------------------------------

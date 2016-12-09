@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Response;
 use Cache;
+use Config;
 
 use RestRose\Wechat\Enterprise\Api;
 //use RestRose\Wechat\Public\Mcrypt;
@@ -33,6 +34,30 @@ class WayController extends Controller
     {
         $w = new Papi;
         if($w->ca()) echo $w->ca();
+    }
+
+    /**
+     * Auto update From Github
+     *
+     */
+    public function git(){
+    	if(!Config::has('daffodil') || !Config::get('daffodil')['service_path']) return 'daffodil.php Missing';
+    	$path = Config::get('daffodil')['service_path'];
+    	$key = Config::get('daffodil')['key'];
+
+    	$github_signature = @$_SERVER['HTTP_X_HUB_SIGNATURE'];
+        $payload = file_get_contents('php://input');
+
+        $arr = explode('=', $github_signature);
+        $algo = $arr[0];
+        $signature = $arr[1];
+
+        $payload_hash = hash_hmac($algo, $payload, $key);
+        if($payload_hash != $signature) return 'invalid key!';
+        
+        shell_exec('cd '.$path);
+        shell_exec('/usr/bin/git pull');
+        return 200;
     }
 
 }
