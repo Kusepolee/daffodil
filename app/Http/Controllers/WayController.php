@@ -24,7 +24,8 @@ class WayController extends Controller
     {
         $w = new Api;
         //return $w->openCallbackMode();
-        $w->sendText('1',$w->openCallbackMode());
+        $content = $w->openCallbackMode();
+        $w->sendText('1',$content);
     }
 
     /**
