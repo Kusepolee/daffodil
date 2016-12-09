@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/way/clear', 'WayController@clearCache');
 Route::get('/way/wechat_enterprise_ca', 'WayController@wechatCallbackEnterprise');
 Route::get('/way/wechat_public_ca', 'WayController@wechatCallbackPublic');
 Route::post('/way/git', 'WayController@git');
@@ -26,7 +27,7 @@ Route::get('/', function () {
 |
 */
 Route::get('/test', function () {
-    return '12345';
+    Cache::
 });
 
 

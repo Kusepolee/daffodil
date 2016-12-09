@@ -11,7 +11,6 @@ use Cache;
 use Config;
 
 use RestRose\Wechat\Enterprise\Api;
-//use RestRose\Wechat\Public\Mcrypt;
 use RestRose\Wechat\Publics\Api as Papi;
 
 class WayController extends Controller
@@ -23,9 +22,7 @@ class WayController extends Controller
     public function wechatCallbackEnterprise()
     {
         $w = new Api;
-        //return $w->openCallbackMode();
-        $content = $w->openCallbackMode();
-        $w->sendText('1',$content);
+        return $w->openCallbackMode();
     }
 
     /**
@@ -62,4 +59,17 @@ class WayController extends Controller
         return 200;
     }
 
+    /**
+     * clearCache
+     *
+     */
+    public function clearCache(){
+        Cache::flush();
+    }
 }
+
+
+
+
+
+
