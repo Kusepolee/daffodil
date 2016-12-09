@@ -11,14 +11,28 @@
 |
 */
 
-Route::get('/way/wechat_callback_enterprise', 'WayController@wechatCallbackEnterprise');
+Route::get('/way/wechat_enterprise_ca', 'WayController@wechatCallbackEnterprise');
+Route::get('/way/wechat_public_ca', 'WayController@wechatCallbackPublic');
 
 Route::get('/', function () {
      $w = new RestRose\Wechat\Enterprise\Api;
+     //$array = ['name'=>'测试up', 'parentid'=>'1', 'order'=>'1', 'id'=>'2'];
+     $array = ['title'=>'标题瞄瞄','description'=>'介绍1','url'=>'sina.com.cn','picurl'=>'sina.com'];
+
+
+     //$b = $w->updateDepartment($array);
+     //print_r($b);
+     $id = 4;
+     //$b = $w->deleteDepartment($id);
+     //print_r($w->getNotFollowList());
+     //$w->sendText('1','haha');
+     $w->sendNews('1',$array);
+
+     //echo $w->getToken();
      //$a = $w->getAuthInfo();
      //print_r($a);
     //echo Request::url();
-     $b = $w->getAuthCode();
+     //$b = $w->getAuthCode();
      //echo $b;
     // echo Request::path();
  
@@ -27,19 +41,15 @@ Route::get('/', function () {
 Route::get('/test', function () {
      //echo "LEEhhh";
     //return view('welcome');
-    //$a = Cache::get('arr');
-    //print_r($a);
-    echo Cache::get('aes_msg');
+    $a = Cache::get('arr');
+    print_r($a);
+    //echo Cache::get('str');
     //echo Cache::get('str1');
     Cache::flush();
 });
 
 Route::get('/test1', function () {
-     $w = new RestRose\Wechat\Enterprise\Api;
-    // //echo $w->getToken();
-     $a = $w->openCallbackMode();
-    // print_r($a);
-    //Cache::flush();
+    echo str_random(32);
 
 });
 
