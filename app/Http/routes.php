@@ -16,7 +16,7 @@ Route::get('/way/wechat_public_ca', 'WayController@wechatCallbackPublic');
 Route::post('/way/git', 'WayController@git');
 
 Route::get('/', function () {
-    return 'Rhonin';
+    return 'Hi Rhonin';
 });
 
 /*
