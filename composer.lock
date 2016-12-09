@@ -2043,12 +2043,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/restrose/wechat.git",
-                "reference": "567a8ca3a3cd20f51a127320dc5e6bd33ec1e898"
+                "reference": "57ac09e04e18f5e7586d0e6c715dca2d8a36e231"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/restrose/wechat/zipball/567a8ca3a3cd20f51a127320dc5e6bd33ec1e898",
-                "reference": "567a8ca3a3cd20f51a127320dc5e6bd33ec1e898",
+                "url": "https://api.github.com/repos/restrose/wechat/zipball/57ac09e04e18f5e7586d0e6c715dca2d8a36e231",
+                "reference": "57ac09e04e18f5e7586d0e6c715dca2d8a36e231",
                 "shasum": ""
             },
             "require": {
@@ -2074,7 +2074,7 @@
             "keywords": [
                 "restrose"
             ],
-            "time": "2016-12-09 13:44:54"
+            "time": "2016-12-09 14:24:25"
         },
         {
             "name": "swiftmailer/swiftmailer",
