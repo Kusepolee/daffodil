@@ -26,6 +26,9 @@ public/favicon.*
 #custom
 public/custom/
 
+#wechat ca files
+public/MP*
+
 socket.js
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
