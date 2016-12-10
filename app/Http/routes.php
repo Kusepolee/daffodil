@@ -20,7 +20,7 @@ Route::get('/', function () {
     return 'Hi Rhonin';
 });
 
-Route::get('/way/clear', 'ProductController@index');
+Route::get('/product', 'ProductController@index');
 
 /*
 |--------------------------------------------------------------------------
