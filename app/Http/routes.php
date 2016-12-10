@@ -17,11 +17,12 @@ Route::get('/way/wechat_public_ca', 'WayController@wechatCallbackPublic');
 Route::post('/way/git', 'WayController@git');
 
 Route::get('/', function () {
-    return 'Hi Rhonin';
+    return 'SHOP';
 });
 
-Route::get('/product', 'ProductController@index');
-
+Route::group(['middleware' => 'wechat_or_login'], function () {
+    Route::get('/product', 'ProductController@index');
+});
 /*
 |--------------------------------------------------------------------------
 | Test Rutes

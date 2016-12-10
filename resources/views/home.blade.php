@@ -1,3 +1,4 @@
+<?php if(Session::has('name')) echo Session::get('name'); ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
