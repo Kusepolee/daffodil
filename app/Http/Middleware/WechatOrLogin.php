@@ -5,7 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Session;
 use Cookie;
-use Member;
+use App\Member;
+use Input;
 
 use RestRose\Wechat\Enterprise\Api;
 
@@ -57,7 +58,7 @@ class WechatOrLogin
                     $fnc = new Api;
                     $arr = $fnc->getAuthInfo();
 
-                    $rec = Member::where('work_id', $arr['UserId']);
+                    $rec = Member::where('work_id', $arr['UserId'])->first();
                     Session::put('id', $rec->id);
                     Session::put('name', $rec->name);
 

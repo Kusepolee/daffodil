@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'wechat_or_login'], function () {
-    Route::get('/product', 'ProductController@index');
+    Route::get('/test1', 'ProductController@index');
 });
 /*
 |--------------------------------------------------------------------------
@@ -30,14 +30,7 @@ Route::group(['middleware' => 'wechat_or_login'], function () {
 |
 */
 Route::get('/test', function () {
-    $arr = Cache::get('callback');
-    print_r($arr);
-    $str = Cache::get('callback_str');
-    echo $str;
-    Cache::flush();
-    $w = new RestRose\Wechat\Enterprise\Api;
-    $w->sendText('1','good');
-    //echo $w->getToken();
+    return view('home');
 });
 
 
