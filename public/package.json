@@ -13,6 +13,9 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "cropper": "^2.3.4"
+    "cropper": "^2.3.4",
+    "flexslider": "^2.6.3",
+    "jquery-waypoints": "^2.0.5",
+    "jquery.easing": "^1.4.1"
   }
 }
