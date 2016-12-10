@@ -23,27 +23,27 @@
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="base/css/animate.css">
+	<link rel="stylesheet" href="custom/rhonin/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="base/css/icomoon.css">
+	<link rel="stylesheet" href="custom/rhonin/css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}" >
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="base/css/flexslider.css">
+	<link rel="stylesheet" href="custom/rhonin/css/flexslider.css">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('node_modules/flexslider/flexslider.css') }}" >
 
 	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="base/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="base/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="custom/rhonin/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="custom/rhonin/css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="base/css/style.css">
+	<link rel="stylesheet" href="custom/rhonin/css/style.css">
 
 	<!-- Modernizr JS -->
-	<script src="base/js/modernizr-2.6.2.min.js"></script>
+	<script src="custom/rhonin/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
-	<script src="base/js/respond.min.js"></script>
+	<script src="custom/rhonin/js/respond.min.js"></script>
 	<![endif]-->
 
 	</head>
@@ -56,7 +56,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-xs-2">
-					<a href="index.html"><img id="fh5co-logo" src="custom/image/rhonin.svg" alt=""></a>
+					<a href="index.html"><img id="fh5co-logo" src="custom/rhonin/image/rhonin.svg" alt=""></a>
 				</div>
 				<div class="logo col-md-5 col-xs-6 text-center menu-1">
 					<ul>
@@ -96,7 +96,7 @@
                 <div class="logo col-md-1">
                 	<li class="dropdown">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-							<img class="avatar" src="custom/image/avatar.jpg" alt="">
+							<img class="avatar" src="custom/rhonin/image/avatar.jpg" alt="">
 						</a>
 						<ul class="dropdown-menu">
                             <li><a href=""> Profile</a></li>
@@ -112,7 +112,7 @@
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(custom/image/img_bg_1.jpg);">
+		   	<li style="background-image: url(custom/rhonin/image/img_bg_1.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
@@ -127,7 +127,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(custom/image/img_bg_2.jpg);">
+		   	<li style="background-image: url(custom/rhonin/image/img_bg_2.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -141,7 +141,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(custom/image/img_bg_3.jpg);">
+		   	<li style="background-image: url(custom/rhonin/image/img_bg_3.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -155,7 +155,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(custom/image/img_bg_4.jpg);">
+		   	<li style="background-image: url(custom/rhonin/image/img_bg_4.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -221,7 +221,7 @@
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(custom/image/product-1.jpg);">
+						<div class="product-grid" style="background-image:url(custom/rhonin/image/product-1.jpg);">
 						</div>
 						<div class="desc">
 							<h3><a href="single.html">Hauteville Concrete Rocking Chair</a></h3>
@@ -231,7 +231,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(custom/image/product-2.jpg);">
+						<div class="product-grid" style="background-image:url(custom/rhonin/image/product-2.jpg);">
 							<span class="sale">Sale</span>
 						</div>
 						<div class="desc">
@@ -242,7 +242,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(custom/image/product-3.jpg);">
+						<div class="product-grid" style="background-image:url(custom/rhonin/image/product-3.jpg);">
 						</div>
 						<div class="desc">
 							<h3><a href="single.html">Ligomancer</a></h3>
@@ -254,7 +254,7 @@
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(custom/image/product-4.jpg);">
+						<div class="product-grid" style="background-image:url(custom/rhonin/image/product-4.jpg);">
 						</div>
 						<div class="desc">
 							<h3><a href="single.html">Alato Cabinet</a></h3>
@@ -264,7 +264,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(custom/image/product-5.jpg);">
+						<div class="product-grid" style="background-image:url(custom/rhonin/image/product-5.jpg);">
 						</div>
 						<div class="desc">
 							<h3><a href="single.html">Earing Wireless</a></h3>
@@ -274,7 +274,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(custom/image/product-6.jpg);">
+						<div class="product-grid" style="background-image:url(custom/rhonin/image/product-6.jpg);">
 						</div>
 						<div class="desc">
 							<h3><a href="single.html">Sculptural Coffee Table</a></h3>
@@ -301,7 +301,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="custom/image/person1.jpg" alt="user">
+										<img src="custom/rhonin/image/person1.jpg" alt="user">
 									</figure>
 									<span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -312,7 +312,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="custom/image/person2.jpg" alt="user">
+										<img src="custom/rhonin/image/person2.jpg" alt="user">
 									</figure>
 									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -323,7 +323,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="custom/image/person3.jpg" alt="user">
+										<img src="custom/rhonin/image/person3.jpg" alt="user">
 									</figure>
 									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -339,7 +339,7 @@
 	</div>
 	
 
-	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(custom/image/img_bg_5.jpg);">
+	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(custom/rhonin/image/img_bg_5.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="display-t">
@@ -487,16 +487,16 @@
 	<!-- Bootstrap -->
 	<script src="{{ URL::asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 	<!-- Waypoints -->
-	<script src="base/js/jquery.waypoints.min.js"></script>
+	<script src="custom/rhonin/js/jquery.waypoints.min.js"></script>
 	
 	<!-- Carousel -->
-	<script src="base/js/owl.carousel.min.js"></script>
+	<script src="custom/rhonin/js/owl.carousel.min.js"></script>
 	<!-- countTo -->
-	<script src="base/js/jquery.countTo.js"></script>
+	<script src="custom/rhonin/js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
 	<script src="{{ URL::asset('node_modules/flexslider/jquery.flexslider-min.js')}}"></script>
 	<!-- Main -->
-	<script src="base/js/main.js"></script>
+	<script src="custom/rhonin/js/main.js"></script>
 
 	</body>
 </html>

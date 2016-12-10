@@ -18,9 +18,6 @@ Thumbs.db
 #ico
 public/favicon.*
 
-#custom
-public/custom/
-
 #wechat ca files
 public/MP*
 
