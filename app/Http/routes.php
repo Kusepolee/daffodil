@@ -21,7 +21,8 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'wechat_or_login'], function () {
-    Route::get('/test1', 'ProductController@index');
+    Route::get('/product', 'ProductController@create');
+    Route::get('/product/create', 'ProductController@create');
 });
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,8 @@ Route::group(['middleware' => 'wechat_or_login'], function () {
 |
 */
 Route::get('/test', function () {
-    return view('list');
+    return view('input');
+
 });
 
 

@@ -1,3 +1,9 @@
+<?php 
+    $w = new RestRose\Wechat\Enterprise\Api;
+    $http_head = Config::get('daffodil')['service_ssl'] ? 'https' : 'http';
+    $url = $http_head."://res.wx.qq.com/open/js/jweixin-1.1.0.js";
+
+?>
 @extends('head')
 @section('content')
 
@@ -51,9 +57,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="lastname" class="col-sm-2 control-label">证书</label>
+                            <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:wx.scanQRCode();" class="btn btn-success">扫描</a></label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
+                                <input type="text" class="form-control" id="ca" 
                                        placeholder="鉴定证书">
                             </div>
                         </div>
@@ -67,10 +73,48 @@
                         
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-success btn-block  bk-margin-top-20">确定</button>
+                
                         </div>									
                 </div>
             </form>
         </div>
     </div>
 	</div>
+<script src={{ $url }} type="text/javascript" ></script>
+<script type="text/javascript" >
+    wx.config(<?php echo $w->getSignature(false,['scanQRCode']); ?>);
+
+
+   wx.scanQRCode({
+        needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+        scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+        success: function (res) {
+            var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+            $("#ca").val(result);
+        }
+    });
+
+
+    function close()
+    {
+      wx.closeWindow();
+    }
+
+</script>
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

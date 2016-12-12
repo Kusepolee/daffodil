@@ -6,9 +6,9 @@
 	<title>Rhonin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}" >
+	<link id="base-style" href="custom/style.css" rel="stylesheet">
     <script src="{{ URL::asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
     <script src="{{ URL::asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-	<link id="base-style" href="custom/style.css" rel="stylesheet">
 
 		
 </head>
@@ -31,11 +31,10 @@
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">产品列表</a></li>
 			<li><a href="#">进货</a></li>
-			    @if(Session::has('name'))
-		           <li>{{ Session::get('name') }}</li>
-		        @endif
 		</ul>
 	</div>
+
+
 	</div>
 </nav>
 

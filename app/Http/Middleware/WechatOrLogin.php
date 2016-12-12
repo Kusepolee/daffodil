@@ -7,6 +7,7 @@ use Session;
 use Cookie;
 use App\Member;
 use Input;
+use Request;
 
 use RestRose\Wechat\Enterprise\Api;
 

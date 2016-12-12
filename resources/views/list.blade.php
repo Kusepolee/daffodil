@@ -1,5 +1,6 @@
 @extends('head')
 @section('content')
+
 <div>
 	<form class="navbar-form navbar-left" role="search">
 		<div class="form-group">
@@ -34,4 +35,5 @@
 		</tr>
 	</tbody>
 </table>
+
 @endsection
