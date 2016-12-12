@@ -21,6 +21,7 @@ class CreateProductTable extends Migration
             $table->string('ca')->nullable();
             $table->integer('sn');
             $table->string('shop');
+            $table->string('state');
             $table->decimal('price',8,2);
             $table->integer('create_by');
             $table->string('img')->nullable();
