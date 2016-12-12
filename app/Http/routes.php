@@ -30,7 +30,7 @@ Route::group(['middleware' => 'wechat_or_login'], function () {
 |
 */
 Route::get('/test', function () {
-    return view('home');
+    return view('list');
 });
 
 

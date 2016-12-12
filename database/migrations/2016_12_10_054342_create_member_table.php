@@ -16,6 +16,8 @@ class CreateMemberTable extends Migration
             $table->increments('id');
             $table->integer('work_id')->unique();// = userid, begin of wechat items
             $table->string('name');
+            $table->string('shop');
+            $table->integer('state');
             $table->string('password');
             $table->string('mobile')->unique();
             $table->timestamps();

@@ -148,7 +148,6 @@ return [
         /*
          * Manual
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
 
     ],
@@ -202,7 +201,6 @@ return [
         /*
          * Manual
          */
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
 
     ],
