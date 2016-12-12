@@ -1,3 +1,9 @@
+<?php 
+    $w = new RestRose\Wechat\Enterprise\Api;
+    $http_head = Config::get('daffodil')['service_ssl'] ? 'https' : 'http';
+    $url = $http_head."://res.wx.qq.com/open/js/jweixin-1.1.0.js";
+
+?>
 @extends('head')
 @section('content')
 
@@ -67,10 +73,37 @@
                         
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-success btn-block  bk-margin-top-20">确定</button>
+                            <a class="btn btn-success btn-block" onclick="javascript:close();">关闭</a>
                         </div>									
                 </div>
             </form>
         </div>
     </div>
 	</div>
+<script src={{ $url }} type="text/javascript" ></script>
+<script type="text/javascript" >
+    wx.config(<?php echo $w->getSignature(true,['closeWindow']); ?>);
+
+    function close()
+    {
+      wx.closeWindow();
+    }
+
+</script>
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
