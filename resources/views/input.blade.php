@@ -92,11 +92,7 @@
             success: function (res) {
                alert('fuck');
             }
-            error: function(res){
-                  if(res.errMsg.indexOf('function_not_exist') > 0){
-                       alert('版本过低请升级')
-                    }
-             }
+
         });
 
 
