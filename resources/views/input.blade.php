@@ -14,60 +14,68 @@
         <h4 class="panel-title">进货</h4>
     </div>
         <div class="panel-body">								
-            <form class="form-horizontal login" action="product/add" method="post">
+            <form class="form-horizontal login" action="product/store" method="post">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">名称</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
-                                       placeholder="产品名称">
+                                <input type="text" class="form-control" id="name" name="name" 
+                                       placeholder="产品名称" value={{ old('name') }}>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">英文</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
-                                       placeholder="English Name">
+                                <input type="text" class="form-control" id="name_en" name="name_en" 
+                                       placeholder="English Name" value={{ old('name_en') }}>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">价格</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
-                                       placeholder="￥统一零售价">
+                                <input type="number" class="form-control" id="price" name="price" 
+                                       placeholder="￥统一零售价" value={{ old('price') }}>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">数量</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
-                                       placeholder="数量">
+                                <input type="number" class="form-control" id="lastname" name="amount" 
+                                       placeholder="数量" value={{ old('amount') }}>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">类别</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
-                                       placeholder="产品种类,如:吊坠">
+                                <input type="text" class="form-control" id="lastname" name="type" 
+                                       placeholder="产品种类,如:吊坠" value={{ old('type') }}>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label">店面</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lastname" name="shop" 
+                                       placeholder="产品所属店面" value={{ old('shop') }}>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:wx.scanQRCode();" class="btn btn-success">扫描</a></label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="ca" 
-                                       placeholder="鉴定证书">
+                                <input type="text" class="form-control" id="ca" name="ca" 
+                                       placeholder="鉴定证书" value={{ old('ca') }}>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">说明</label>
                             <div class="col-sm-10">
-                                 <textarea class="form-control" rows="5"></textarea>
+                                 <textarea class="form-control" rows="5" name="content" value={{ old('content') }}></textarea>
                             </div>
                         </div>
                         
@@ -80,12 +88,21 @@
         </div>
     </div>
 	</div>
+            @if($errors->any())  
+            <div class="panel-body">
+            <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>错误: {{ $error }}</p>
+            @endforeach
+            </div>
+            </div>
+                      
+        @endif
 <script src={{ $url }} type="text/javascript" ></script>
 <script type="text/javascript" >
     wx.config(<?php echo $w->getSignature(false,['scanQRCode']); ?>);
 
-
-   wx.scanQRCode({
+    wx.scanQRCode({
         needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
         scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
         success: function (res) {
