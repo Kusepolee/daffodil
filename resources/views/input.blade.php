@@ -73,7 +73,7 @@
                         
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-success btn-block  bk-margin-top-20">确定</button>
-                            <a class="btn btn-success btn-block" onclick="javascript:close();">关闭</a>
+                            <a class="btn btn-success btn-block" href="javascript:scan();">扫码</a>
                         </div>									
                 </div>
             </form>
@@ -84,19 +84,23 @@
 <script type="text/javascript" >
     wx.config(<?php echo $w->getSignature(true,['closeWindow','scanQRCode']); ?>);
 
-    wx.scanQRCode({
-        desc: 'scanQRCode desc',
-        needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-        scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
-        success: function (res) {
-           alert(res);
-        }
-        error: function(res){
-              if(res.errMsg.indexOf('function_not_exist') > 0){
-                   alert('版本过低请升级')
-                }
-         }
-    });
+    function scan()
+    {
+        wx.scanQRCode({
+            desc: 'scanQRCode desc',
+            needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+            scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+            success: function (res) {
+               alert(res);
+            }
+            error: function(res){
+                  if(res.errMsg.indexOf('function_not_exist') > 0){
+                       alert('版本过低请升级')
+                    }
+             }
+        });
+    }
+    
 
     function close()
     {
