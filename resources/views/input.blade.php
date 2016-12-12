@@ -73,7 +73,7 @@
                         
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-success btn-block  bk-margin-top-20">确定</button>
-                            <a class="btn btn-success btn-block" href="javascript:scan();">扫码</a>
+                            <a class="btn btn-success btn-block" href="scan()">扫码</a>
                         </div>									
                 </div>
             </form>
