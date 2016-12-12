@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="lastname" class="col-sm-2 control-label">证书</label>
+                            <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:close();" class="btn btn-success">扫描</a></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="lastname" 
                                        placeholder="鉴定证书">
@@ -73,7 +73,7 @@
                         
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-success btn-block  bk-margin-top-20">确定</button>
-                            <button class="btn btn-success btn-block" onclick="close()">扫码</button>
+                
                         </div>									
                 </div>
             </form>
@@ -82,7 +82,7 @@
 	</div>
 <script src={{ $url }} type="text/javascript" ></script>
 <script type="text/javascript" >
-    wx.config(<?php echo $w->getSignature(true,['closeWindow','scanQRCode']); ?>);
+    wx.config(<?php echo $w->getSignature(false,['closeWindow','scanQRCode']); ?>);
 
     function scan()
     {
@@ -100,12 +100,10 @@
              }
         });
     }
-    
 
     function close()
     {
-        alert('fuck');
-      //wx.closeWindow();
+      wx.closeWindow();
     }
 
 </script>
