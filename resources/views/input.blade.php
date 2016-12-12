@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:scan();" class="btn btn-success">扫描</a></label>
+                            <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:wx.scanQRCode();" class="btn btn-success">扫描</a></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="lastname" 
                                        placeholder="鉴定证书">
@@ -85,9 +85,6 @@
     wx.config(<?php echo $w->getSignature(true,['scanQRCode']); ?>);
 
 
-
-    function scan()
-    {
         wx.scanQRCode({
             desc: 'scanQRCode desc',
             needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
@@ -101,7 +98,7 @@
                     }
              }
         });
-    }
+
 
     function close()
     {
