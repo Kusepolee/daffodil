@@ -82,7 +82,7 @@
 	</div>
 <script src={{ $url }} type="text/javascript" ></script>
 <script type="text/javascript" >
-    wx.config(<?php echo $w->getSignature(true,['closeWindow']); ?>);
+    wx.config(<?php echo $w->getSignature(true,['scanQRCode']); ?>);
 
 
     wx.scanQRCode({
