@@ -59,7 +59,7 @@
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:wx.scanQRCode();" class="btn btn-success">扫描</a></label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lastname" 
+                                <input type="text" class="form-control" id="ca" 
                                        placeholder="鉴定证书">
                             </div>
                         </div>
@@ -87,10 +87,10 @@
 
     wx.scanQRCode({
         desc: 'scanQRCode desc',
-        needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+        needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
         scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
         success: function (res) {
-           alert(res);
+           $("#ca").val(res);
         }
 
     });
