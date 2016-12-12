@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:close();" class="btn btn-success">扫描</a></label>
+                            <label for="lastname" class="col-sm-2 control-label">证书<a href="javascript:scan();" class="btn btn-success">扫描</a></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="lastname" 
                                        placeholder="鉴定证书">
