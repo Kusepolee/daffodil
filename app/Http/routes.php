@@ -20,11 +20,11 @@ Route::get('/', function () {
     return 'SHOP';
 });
 
-//Route::group(['middleware' => 'wechat_or_login'], function () {
-    Route::get('/product', 'ProductController@index');
+Route::group(['middleware' => 'wechat_or_login'], function () {
+    Route::get('/product', 'ProductController@create');
     Route::get('/product/create', 'ProductController@create');
     Route::post('/product/store', 'ProductController@store');
-//});
+});
 /*
 |--------------------------------------------------------------------------
 | Test Rutes
