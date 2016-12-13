@@ -16,6 +16,15 @@ Route::get('/way/wechat_enterprise_ca', 'WayController@wechatCallbackEnterprise'
 Route::get('/way/wechat_public_ca', 'WayController@wechatCallbackPublic');
 Route::post('/way/git', 'WayController@git');
 
+$router->group(['domain' => 'vip.restrose.cn'], function()
+{
+    Route::get('/vip', function()
+    {
+        echo 'vip';
+    });
+ 
+});
+
 // 登录
 Route::get('/login', function() {
 	return view('login');
@@ -23,7 +32,7 @@ Route::get('/login', function() {
 Route::post('/login', 'MemberController@login');
 
 Route::get('/', function () {
-    return 'SHOP';
+    return view('home');
 });
 
 Route::group(['middleware' => 'wechat_or_login'], function () {
