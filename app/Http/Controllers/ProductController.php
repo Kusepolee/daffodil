@@ -47,7 +47,7 @@ class ProductController extends Controller
         $input['state'] = '正常';
         $input['create_by'] = Session::get('id');
         Product::create($input);
-        echo 'haha ';
+        //return redirect('/product/create');
     }
 
     /**
