@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Member;
 use App\Product;
 use Session;
+use Excel;
 
 class ProductController extends Controller
 {
@@ -19,7 +20,44 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $recs = Product::orderBy('name')
+                        ->orderBy('updated_at', 'desc')
+                        ->paginate(20);
+
+        return view('product', ['recs'=>$recs]);
+    }
+
+    public function excel()
+    {
+        $recs = Product::get();
+
+        $data_array = [['名称', '英文名', '类别', '价格', '编号', '店面', '证书', '说明']];
+
+        if(count($recs)){
+            foreach ($recs as $rec) {
+                $tmp_array = [];
+                $tmp_array[] = $rec->name;
+                $tmp_array[] = $rec->name_en;
+                $tmp_array[] = $rec->type;
+                $tmp_array[] = floatval($rec->price);
+                $tmp_array[] = $rec->sn;
+                $tmp_array[] = $rec->shop;
+                $tmp_array[] = $rec->ca;
+                $tmp_array[] = $rec->content;
+
+                $data_array[] = $tmp_array;
+            }
+        }
+
+        $name = date("Y-m-d-H-i",time()).'_products';
+
+        Excel::create($name,function($excel) use ($data_array){
+            $excel->sheet('products', function($sheet) use ($data_array){
+                $sheet->setAutoSize(true);
+                $sheet->freezeFirstRow();
+                $sheet->rows($data_array);
+            });
+        })->export('xls');
     }
 
     /**

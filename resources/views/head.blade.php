@@ -29,8 +29,8 @@
 	</div>
 	<div class="collapse navbar-collapse" id="example-navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">产品列表</a></li>
-			<li><a href="#">进货</a></li>
+			<li class="active"><a href="/product">产品列表</a></li>
+			<li><a href="/product/create">进货</a></li>
 		</ul>
 	</div>
 

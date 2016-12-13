@@ -28,7 +28,8 @@ Route::get('/vip', function() {
 });
 
 Route::group(['middleware' => 'wechat_or_login'], function () {
-    Route::get('/product', 'ProductController@create');
+    Route::get('/product', 'ProductController@index');
+    Route::post('/product/excel', 'ProductController@excel');
     Route::get('/product/create', 'ProductController@create');
     Route::post('/product/store', 'ProductController@store');
 });
