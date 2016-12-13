@@ -23,8 +23,8 @@ Route::get('/login', function() {
 });
 Route::post('/login', 'MemberController@login');
 
-Route::get('/vip', function () {
-    return 'vip';
+Route::get('/vip', function() {
+    return view('vip');
 });
 
 Route::group(['middleware' => 'wechat_or_login'], function () {
