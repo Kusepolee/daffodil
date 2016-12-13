@@ -16,10 +16,13 @@ Route::get('/way/wechat_enterprise_ca', 'WayController@wechatCallbackEnterprise'
 Route::get('/way/wechat_public_ca', 'WayController@wechatCallbackPublic');
 Route::post('/way/git', 'WayController@git');
 
-Route::group(['domain' => 'vip.restrose.cn'], function () {
-    Route::get('/vip', function () {
-        return 'vip';
+Route::group(['domain' => '{vip}.restrose.cn'], function () {
+    Route::get('/', function () {
+        return redirect('/{vip}');
     });
+});
+Route::get('/vip', function() {
+    return 'vip';
 });
 
 // 登录
