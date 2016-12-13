@@ -27,6 +27,14 @@ Route::get('/vip', function() {
     return view('vip');
 });
 
+Route::group(array('domain' => '{id}.restrose.cn'), function()
+{
+    Route::get('/{id}', function()
+    {
+        return 'hello vip';
+    });
+});
+
 Route::group(['middleware' => 'wechat_or_login'], function () {
     Route::get('/product', 'ProductController@create');
     Route::get('/product/create', 'ProductController@create');
