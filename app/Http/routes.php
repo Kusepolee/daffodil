@@ -18,7 +18,7 @@ Route::post('/way/git', 'WayController@git');
 
 Route::group(['domain' => '{vip}.restrose.cn'], function () {
     Route::get('/', function () {
-        return redirect('/{vip}');
+        return 'ip';
     });
 });
 Route::get('/vip', function() {
