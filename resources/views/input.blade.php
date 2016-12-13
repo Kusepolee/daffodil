@@ -14,7 +14,7 @@
         <h4 class="panel-title">进货</h4>
     </div>
         <div class="panel-body">								
-            <form class="form-horizontal login" action="product/store" method="post">
+            <form class="form-horizontal login" action="/product/store" method="post">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="lastname" class="col-sm-2 control-label">名称</label>

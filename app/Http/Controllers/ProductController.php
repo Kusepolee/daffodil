@@ -20,8 +20,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $recs = Product::orderBy('name')
-                        ->orderBy('updated_at', 'desc')
+        $recs = Product::orderBy('updated_at', 'desc')
+                        ->orderBy('created_at', 'desc')
                         ->paginate(20);
 
         return view('product', ['recs'=>$recs]);
