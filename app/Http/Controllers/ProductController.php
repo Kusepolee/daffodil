@@ -71,6 +71,34 @@ class ProductController extends Controller
     }
 
     /**
+     * 编辑
+     *
+     */
+    public function edit($id)
+    {
+        $old = Product::find($id);
+
+        return view('input', ['old'=>$old]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Requests\ProductRequest $request, $id)
+    {
+        $rec = Product::find($id);
+        $update = $request->all();
+        unset($update['_token']);
+        unset($update['amount']);
+        Product::where('id', $id)->update($update);
+        return redirect('/product');
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -85,7 +113,7 @@ class ProductController extends Controller
         $input['state'] = '正常';
         $input['create_by'] = Session::get('id');
         Product::create($input);
-        //return redirect('/product/create');
+        return redirect('/product');
     }
 
     /**
@@ -99,28 +127,7 @@ class ProductController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    
 
     /**
      * Remove the specified resource from storage.

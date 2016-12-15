@@ -28,7 +28,7 @@
 	                        @foreach($recs as $rec)
 	                            <tr>
 	                                <td>{{ $rec->id }}</td>
-	                                <td>{{ $rec->name }}</td>
+	                                <td><a href="/product/edit/{{ $rec->id }}" class="btn btn-info ">{{ $rec->name }}</a></td>
 	                                <td>{{ $rec->name_en }}</td>
 	                                <td>{{ floatval($rec->price) }}</td>
 	                                <td>{{ $rec->type }}</td>

@@ -31,6 +31,8 @@ Route::group(['middleware' => 'wechat_or_login'], function () {
     Route::get('/product', 'ProductController@index');
     Route::post('/product/excel', 'ProductController@excel');
     Route::get('/product/create', 'ProductController@create');
+    Route::get('/product/edit/{id}', 'ProductController@edit');
+    Route::post('/product/update/{id}', 'ProductController@update');
     Route::post('/product/store', 'ProductController@store');
 });
 /*
